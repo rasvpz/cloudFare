@@ -1,0 +1,81 @@
+@import './variables.css';
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: var(--cf-font);
+  background: var(--cf-bg);
+  color: var(--cf-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  background-image:
+    radial-gradient(1200px 600px at 80% -10%, rgba(245, 196, 81, 0.08), transparent 60%),
+    radial-gradient(900px 500px at -10% 20%, rgba(22, 199, 132, 0.06), transparent 60%);
+}
+
+a { color: var(--cf-gold); text-decoration: none; }
+a:hover { color: var(--cf-gold-2); }
+
+button { font-family: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--cf-gold);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 520px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.app-main {
+  flex: 1;
+  padding: 14px var(--cf-pad-x) 120px;
+  padding-top: calc(14px + var(--cf-safe-top));
+  padding-bottom: calc(120px + var(--cf-safe-bottom));
+}
+
+/* Page transitions */
+.page { animation: cfFadeUp var(--cf-dur) var(--cf-ease); }
+@keyframes cfFadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 8px; }
+
+/* Skeleton */
+.skeleton {
+  background: linear-gradient(90deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 100%);
+  background-size: 200% 100%;
+  animation: cfShimmer 1.4s linear infinite;
+  border-radius: 10px;
+}
+@keyframes cfShimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Utility */
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

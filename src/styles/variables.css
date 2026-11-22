@@ -1,0 +1,43 @@
+:root {
+  /* Brand */
+  --cf-primary: #071A35;
+  --cf-primary-2: #102B50;
+  --cf-surface: #162F52;
+  --cf-bg: #061225;
+  --cf-gold: #F5C451;
+  --cf-gold-2: #E0A93A;
+  --cf-emerald: #16C784;
+  --cf-emerald-2: #0FA86E;
+  --cf-text: #F7FAFF;
+  --cf-text-2: #99ACC8;
+  --cf-error: #FF6575;
+  --cf-border: rgba(255, 255, 255, 0.08);
+  --cf-border-strong: rgba(255, 255, 255, 0.14);
+
+  /* Shadows */
+  --cf-shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.25);
+  --cf-shadow-md: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --cf-shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.45);
+  --cf-shadow-gold: 0 10px 30px rgba(245, 196, 81, 0.25);
+
+  /* Radii */
+  --cf-r-sm: 10px;
+  --cf-r-md: 16px;
+  --cf-r-lg: 22px;
+  --cf-r-xl: 28px;
+
+  /* Spacing */
+  --cf-pad-x: 18px;
+  --cf-pad-y: 14px;
+
+  /* Safe area */
+  --cf-safe-top: env(safe-area-inset-top, 0px);
+  --cf-safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  /* Motion */
+  --cf-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --cf-dur: 280ms;
+
+  /* Font */
+  --cf-font: 'Plus Jakarta Sans', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}

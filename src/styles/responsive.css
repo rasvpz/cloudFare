@@ -1,0 +1,29 @@
+@import './variables.css';
+
+/* Tablet */
+@media (min-width: 600px) {
+  .app-shell { max-width: 720px; }
+  .cf-bottom-nav { max-width: 720px; }
+  .toast-stack { max-width: 560px; }
+  .cf-points-grid { grid-template-columns: repeat(4, 1fr); }
+  .cf-product-card { min-height: 320px; }
+}
+
+/* Desktop */
+@media (min-width: 960px) {
+  .app-shell { max-width: 480px; margin-top: 20px; margin-bottom: 20px;
+    border-radius: 28px; overflow: hidden;
+    border: 1px solid var(--cf-border);
+    box-shadow: var(--cf-shadow-lg);
+    min-height: calc(100vh - 40px);
+  }
+  .cf-bottom-nav { max-width: 480px; border-radius: 0 0 28px 28px; }
+  body { display: grid; place-items: start center; }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  :root { --cf-pad-x: 14px; }
+  .cf-loyalty-card { padding: 16px; }
+  .cf-card-name { font-size: 20px; }
+}
